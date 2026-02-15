@@ -6,6 +6,7 @@ import Counter from './Counter.jsx'
 import ListManager from './ListManager.jsx'
 import Couleur from './Couleur.jsx'
 import Note from './note.jsx'
+import Todo from './todo.jsx'
 
 function Button() {
   return (
@@ -32,6 +33,12 @@ function App() {
       */}
       <Couleur initialColor={colors[0]} colorOptions={colors} />
       <Note />
+      <Todo
+        initialTodos={[
+          { name: "React révision", priority: "Haute", done: false },
+          { name: "TP Angular", priority: "Moyenne", done: true },
+        ]}
+      />
     </>
   )
 }
