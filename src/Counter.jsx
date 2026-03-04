@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 
@@ -14,6 +14,13 @@ export default function Counter({ step }) {
     const reset = () => {
         setCount(0)
     }
+
+    useEffect(() => {
+        console.log('count has been updated', count);
+    },
+        [
+            count
+        ])
 
     return (
         <>
